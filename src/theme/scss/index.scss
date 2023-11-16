@@ -3,4 +3,9 @@
 body {
   margin: 0;
   padding: 0;
+  transition-duration: 0.3s;
+  &.dark-mode {
+    background-color: #363062;
+    color: #fff;
+  }
 }
