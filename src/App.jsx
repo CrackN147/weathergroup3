@@ -2,12 +2,14 @@ import {
   Header,
   Footer,
   BigCard,
-  Carousel
+  Carousel,
+  BackGround
 } from "./components";
 import { DataProvider } from "global/contexts/DataContext";
 export const App = () => {
   return (
     <DataProvider>
+      <BackGround />
       <Header />
       <BigCard />
       <Carousel />

@@ -6,7 +6,7 @@ import { getWeatherForecast } from "global/api";
 import { Loader } from "components/elements/Loader";
 import { SmallCard } from "components/cards";
 export const Carousel = (props) => {
-  const { city } = useContext(DataContext);
+  const { city, updateDay } = useContext(DataContext);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -24,11 +24,14 @@ export const Carousel = (props) => {
       {data ?
         <Swiper
           spaceBetween={10}
-          slidesPerView={6}
+          slidesPerView={7}
         >
           {data.list.map((item, index) => (
             <SwiperSlide key={index}>
-              <SmallCard data={item} />
+              <SmallCard 
+                data={item}
+                onClick={() => updateDay(item)}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

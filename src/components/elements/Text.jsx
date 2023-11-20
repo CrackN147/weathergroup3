@@ -1,6 +1,6 @@
-export const Text = ({children}) => {
+export const Text = ({type = 'small-card', children}) => {
   return (
-    <p className="text">
+    <p className={`${type}-text`}>
       {children}
     </p>
   );
